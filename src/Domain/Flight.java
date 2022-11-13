@@ -84,4 +84,5 @@ public class Flight {
     public void setLayover_Location(String layover_Location) {
         Layover_Location = layover_Location;
     }
+
 }

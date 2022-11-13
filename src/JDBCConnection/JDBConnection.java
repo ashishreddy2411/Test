@@ -10,7 +10,7 @@ public class JDBConnection {
     {
         try {
             Class.forName("org.sqlite.JDBC");
-            String dbURL = "jdbc:sqlite:/Users/ashish/IdeaProjects/APP/src/JDBCConnection/mDb.db";
+            String dbURL = "jdbc:sqlite:/Users/ashish/IdeaProjects/APP_Project_V3/src/JDBCConnection/mDb.db";
             conn = DriverManager.getConnection(dbURL);
         } catch (Exception ex) {
         }

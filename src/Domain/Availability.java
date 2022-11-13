@@ -1,7 +1,7 @@
 package Domain;
 
 public class Availability {
-    private int Flight_Number,Total_No_of_Seats,Avaliable_No_of_SeatsE,Avaliable_No_of_SeatsB;
+    private int Flight_Number,Total_No_of_Seats,Avaliable_No_of_Seats;
 
     public int getFlight_Number() {
         return Flight_Number;
@@ -19,19 +19,12 @@ public class Availability {
         Total_No_of_Seats = total_No_of_Seats;
     }
 
-    public int getAvaliable_No_of_SeatsE() {
-        return Avaliable_No_of_SeatsE;
+    public int getAvaliable_No_of_Seats() {
+        return Avaliable_No_of_Seats;
     }
 
-    public void setAvaliable_No_of_SeatsE(int avaliable_No_of_SeatsE) {
-        Avaliable_No_of_SeatsE = avaliable_No_of_SeatsE;
+    public void setAvaliable_No_of_Seats(int avaliable_No_of_Seats) {
+        Avaliable_No_of_Seats = avaliable_No_of_Seats;
     }
 
-    public int getAvaliable_No_of_SeatsB() {
-        return Avaliable_No_of_SeatsB;
-    }
-
-    public void setAvaliable_No_of_SeatsB(int avaliable_No_of_SeatsB) {
-        Avaliable_No_of_SeatsB = avaliable_No_of_SeatsB;
-    }
 }

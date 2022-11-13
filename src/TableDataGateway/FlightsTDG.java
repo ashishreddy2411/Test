@@ -63,7 +63,29 @@ public class FlightsTDG {
             stmt.setInt(10,flight.getLayover_Time());
             flag= stmt.executeUpdate();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+        }
+        return flag;
+    }
+
+    public int modify_flight_details(Flight flight)
+    {
+        int flag = 0;
+        try{
+            Connection conn = JDBConnection.getConnection();
+            String statement = "update flights set Airline=?,Orgin=?,Destination=?,Arrival_Time=?,Departure_Time=?,AirTime=?,Date=?,Layover_Location=?,Layover_Time=? where Flight_Number=?;";
+            PreparedStatement stmt = conn.prepareStatement(statement);
+            stmt.setString(1,flight.getAirline());
+            stmt.setString(2,flight.getOrigin());
+            stmt.setString(3,flight.getDestination());
+            stmt.setInt(4,flight.getArrival_Time());
+            stmt.setInt(5,flight.getDeparture_Time());
+            stmt.setInt(6,flight.getAirtime());
+            stmt.setString(7,flight.getDate());
+            stmt.setString(8,flight.getLayover_Location());
+            stmt.setInt(9,flight.getLayover_Time());
+            stmt.setInt(10,flight.getFlight_Number());
+            flag= stmt.executeUpdate();
+        }catch (Exception e) {
         }
         return flag;
     }
